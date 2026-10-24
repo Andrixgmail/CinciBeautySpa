@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinci Beauty Spa | Pretoria Central</title>
+<meta name="description" content="Cinci Beauty Spa, Pretoria Central: manicure, pedicure, lashes, waxing, facials, massage and body therapies. Book on WhatsApp 067 708 5887.">
+<link rel="icon" href="images/web/logo-round.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#faf5ef; --sand:#e9dccb; --tan:#cdb08c; --tan-d:#b8966c;
+  --brown:#2e2219; --brown-2:#5a4636; --gold:#b98f45; --gold-l:#d9b46a;
+  --ink:#231b15; --muted:#7d6a5a;
+  --serif:'Cormorant Garamond',Georgia,serif; --caps:'Cinzel',Georgia,serif;
+  --script:'Great Vibes',cursive; --sans:'Montserrat',system-ui,sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.script{font-family:var(--script);font-weight:400}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.8em;border-radius:999px;font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-dark{background:var(--brown);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-line{border-color:var(--brown);color:var(--brown);background:transparent}
+.btn-line:hover{background:var(--brown);color:#fff}
+
+/* ---------- top strip + header ---------- */
+.strip{background:var(--brown);color:#e8d9c3;font-size:.72rem;letter-spacing:.12em}
+.strip .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.strip a{text-decoration:none}
+header.site{position:sticky;top:0;z-index:50;background:rgba(250,245,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(46,34,25,.08)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px var(--sand)}
+.brand b{font-family:var(--script);font-size:2rem;font-weight:400;line-height:1;display:block}
+.brand small{font-family:var(--caps);font-size:.62rem;letter-spacing:.32em;display:block;margin-top:2px}
+nav.main{display:flex;gap:28px;align-items:center}
+nav.main a{text-decoration:none;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--brown-2)}
+nav.main a:hover{color:var(--gold)}
+nav.main .btn{padding:.75em 1.4em;color:#fff}
+.menu-btn{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.menu-btn span{display:block;height:1.5px;background:var(--brown);margin:7px 8px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 40%,#f3e4cf 0%,#e9d7bf 40%,#dcc5a8 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:84px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,5.4vw,4.6rem);line-height:1.02;color:var(--brown);letter-spacing:-.01em}
+.hero h1 .script{display:block;font-size:1.25em;color:var(--gold);line-height:.9;margin-bottom:.1em}
+.hero .tag{font-family:var(--caps);letter-spacing:.3em;font-size:.82rem;color:var(--brown-2);margin:22px 0 18px}
+.hero p.lead{font-size:1.02rem;color:var(--brown-2);max-width:520px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.hero .meta{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;font-size:.78rem;color:var(--brown-2)}
+.hero .meta b{display:block;font-family:var(--caps);font-size:.72rem;letter-spacing:.2em;color:var(--brown);font-weight:600}
+.hero-img{position:relative}
+.hero-img img{width:100%;border-radius:280px 280px 20px 20px;box-shadow:0 30px 60px -25px rgba(70,45,20,.45)}
+.hero-img::before{content:"";position:absolute;inset:-14px;border:1px solid rgba(185,143,69,.55);border-radius:290px 290px 28px 28px;pointer-events:none}
+
+/* ---------- section heads ---------- */
+section.block{padding:96px 0}
+.head{text-align:center;margin-bottom:44px}
+.head .script{font-size:2.6rem;color:var(--gold);line-height:1}
+.head h2{font-family:var(--caps);font-weight:500;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:.14em;color:var(--brown)}
+.head p{color:var(--muted);max-width:600px;margin:12px auto 0}
+
+/* ---------- tabs ---------- */
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:34px}
+.tab{position:relative;border:0;cursor:pointer;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#ddd;color:#fff;text-align:left;font:inherit;padding:0;outline-offset:4px;transition:transform .25s,box-shadow .25s}
+.tab img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tab::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(25,15,8,.78) 100%)}
+.tab span{position:absolute;left:16px;right:16px;bottom:14px;z-index:1}
+.tab b{font-family:var(--caps);font-weight:500;font-size:1.02rem;letter-spacing:.14em;display:block}
+.tab small{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.tab:hover img{transform:scale(1.06)}
+.tab[aria-selected="true"]{transform:translateY(-6px);box-shadow:0 0 0 3px var(--cream),0 0 0 5px var(--gold),0 18px 30px -16px rgba(0,0,0,.5)}
+.panel{display:none;border-radius:28px;overflow:hidden;animation:fade .45s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.book-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}
+.note{font-size:.76rem;text-align:center;margin-top:18px;opacity:.8}
+
+/* ===== MANICURE (beige arch poster) ===== */
+.p-mani{padding:56px 24px;background:
+  linear-gradient(115deg,rgba(255,255,255,0) 20%,rgba(255,255,255,.75) 32%,rgba(255,255,255,0) 44%),
+  linear-gradient(140deg,rgba(0,0,0,0) 50%,rgba(150,140,130,.25) 60%,rgba(255,255,255,.8) 70%,rgba(0,0,0,0) 82%),
+  linear-gradient(100deg,#e6e1da 0%,#f7f4f0 25%,#dcd6ce 45%,#f4f1ec 65%,#d8d2ca 85%,#efebe6 100%)}
+.p-mani .grid{display:grid;grid-template-columns:1fr 1.35fr;gap:40px;align-items:center;max-width:1000px;margin:0 auto}
+.p-mani .side{text-align:center}
+.p-mani .side img{border-radius:200px 200px 16px 16px;width:100%;max-width:340px;margin:0 auto;aspect-ratio:3/4;object-fit:cover;border:6px solid #fff;box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+.p-mani .side h3{font-family:var(--serif);font-size:1.7rem;font-weight:500;color:#6f5537;margin-top:22px;line-height:1.2}
+.p-mani .side p{font-size:.88rem;color:#7b6550;margin-top:8px}
+.arch{background:#cfb38f;color:#fff;border-radius:320px 320px 0 0;padding:70px 34px 40px;box-shadow:0 30px 60px -30px rgba(80,55,25,.5)}
+.arch .ttl{text-align:center;font-family:var(--caps);font-size:3rem;letter-spacing:.06em;line-height:1}
+.arch .ttl .script{display:block;font-size:2.4rem;letter-spacing:0;margin-top:-4px}
+.arch h4{text-align:center;font-family:var(--sans);font-weight:600;letter-spacing:.32em;font-size:.95rem;padding:8px 0;border-top:2px solid #fff;border-bottom:2px solid #fff;margin:22px 0 12px}
+.arch h4.first{border-top:0;margin-top:14px;padding-bottom:4px;border-bottom:0}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;font-weight:600;letter-spacing:.2em;font-size:.82rem;padding:6px 12px}
+.arch .addr{text-align:center;font-size:.7rem;letter-spacing:.22em;font-weight:600;margin-top:26px;line-height:2}
+.p-mani .btn-dark{background:#8a6c4a}
+
+/* ===== PEDICURE (cream / rose / gold poster) ===== */
+.p-pedi{background:#fbf6f2;color:#2a2320}
+.p-pedi .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;padding:52px 46px 40px}
+.p-pedi .brandline{font-family:var(--caps);letter-spacing:.3em;font-size:.8rem;color:#b08a3e;font-weight:600}
+.p-pedi h3{font-family:var(--caps);font-weight:600;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1;margin-top:10px;color:#1c1714}
+.p-pedi h3 + .script{font-size:3rem;color:#c29a4c;line-height:.9;margin-bottom:24px}
+.pcard{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;border-radius:20px;padding:20px 22px;margin-bottom:16px;border:1px solid #e3bcb8;background:#f8e9e7}
+.pcard.gold{background:#fbf3e3;border-color:#e2c78f}
+.pcard .ico{width:70px;height:70px;border-radius:50%;background:#c4807b;display:grid;place-items:center}
+.pcard.gold .ico{background:#c9a04e}
+.pcard .ico svg{width:38px;height:38px;stroke:#fff;fill:none;stroke-width:1.4}
+.pcard h5{font-family:var(--sans);font-weight:600;font-size:1.1rem;letter-spacing:.02em;line-height:1.2}
+.pcard ul{list-style:none;margin-top:6px;font-size:.88rem;columns:2;column-gap:18px}
+.pcard li::before{content:"•";color:#c4807b;margin-right:7px}
+.pcard.gold li::before{color:#c9a04e}
+.price-badge{background:#c4807b;color:#fff;font-weight:700;font-size:1.5rem;padding:10px 20px;border-radius:14px;white-space:nowrap}
+.pcard.gold .price-badge{background:#c9a04e}
+.addons{border:1px solid #e3bcb8;border-radius:20px;padding:26px 22px 10px;position:relative;background:#fcf3f1;margin-top:26px}
+.addons .lbl{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#c4807b;color:#fff;font-weight:600;letter-spacing:.08em;padding:4px 22px;border-radius:10px;font-size:.85rem}
+.addons .row{display:flex;justify-content:space-between;align-items:center;padding:10px 4px;border-bottom:1px solid #ecd2cf;font-weight:500}
+.addons .row:last-child{border-bottom:0}
+.addons .row span:last-child{background:#c4807b;color:#fff;padding:4px 14px;border-radius:10px;font-weight:700}
+.p-pedi .photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px;align-content:start}
+.p-pedi .photos .big{grid-column:1/-1;border-radius:0 0 0 220px;border:3px solid #d6b56d;aspect-ratio:1/1.05;object-fit:cover;width:100%}
+.p-pedi .photos .circ{border-radius:50%;aspect-ratio:1;object-fit:cover;width:100%;border:3px solid #d6b56d}
+.p-pedi .foot{background:#151210;color:#d9b46a;text-align:center;padding:26px 20px}
+.p-pedi .foot .script{font-size:2.1rem;line-height:1.1}
+.p-pedi .foot .btn{margin-top:16px;background:#d9b46a;color:#151210}
+
+/* ===== LASH (silver / charcoal poster) ===== */
+.p-lash{background:linear-gradient(135deg,#ffffff 0%,#eeeeee 55%,#d9d9d9 100%);color:#2d2d2d}
+.p-lash .grid{display:grid;grid-template-columns:1.2fr 1fr;align-items:stretch}
+.p-lash .left{padding:50px 46px 40px}
+.p-lash .brandline{font-family:var(--caps);letter-spacing:.32em;font-size:.78rem;color:#555}
+.p-lash .title{margin-top:18px;line-height:1}
+.p-lash .title .script{font-size:5.4rem;color:#3a3a3a;display:block;line-height:.85}
+.p-lash .title b{font-family:var(--serif);font-weight:500;font-size:2.8rem;letter-spacing:.06em;color:#1e1e1e}
+.p-lash .sub{letter-spacing:.32em;font-size:.72rem;margin:12px 0 30px;color:#555}
+.lrow{display:flex;align-items:center;gap:16px;background:linear-gradient(90deg,#f3f3f3,#e4e4e4);border-radius:999px;padding:8px 10px 8px 8px;margin-bottom:14px;box-shadow:0 6px 16px -10px rgba(0,0,0,.35)}
+.lrow img{width:74px;height:74px;border-radius:50%;object-fit:cover;border:3px solid #fff;flex:none}
+.lrow div{flex:1}
+.lrow h5{font-family:var(--serif);font-weight:600;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.lrow small{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:#666}
+.lrow .pr{background:#4a4a4a;color:#fff;font-weight:600;font-size:1.35rem;padding:10px 22px;border-radius:999px}
+.p-lash .right{position:relative;background:#555 url(images/web/lash-eye.jpg) center/cover;min-height:440px;border-radius:0 0 0 160px}
+.p-lash .quote{position:absolute;left:24px;right:24px;bottom:24px;background:rgba(70,70,70,.85);backdrop-filter:blur(4px);color:#fff;text-align:center;border-radius:24px;padding:20px}
+.p-lash .quote .script{font-size:2.4rem;line-height:1}
+.p-lash .quote p{letter-spacing:.22em;font-size:.78rem}
+.p-lash .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:22px 46px;border-top:1px solid #cfcfcf;background:#f6f6f6}
+.p-lash .foot .script{font-size:1.6rem;color:#444}
+.p-lash .pill{background:#3f3f3f;color:#fff;font-size:.66rem;letter-spacing:.24em;padding:7px 18px;border-radius:999px}
+.p-lash .btn-dark{background:#3f3f3f}
+
+/* ===== WAXING (soft grey poster) ===== */
+.p-wax{background:radial-gradient(ellipse at 30% 20%,#ffffff 0%,#f1f1f1 50%,#e2e2e2 100%);color:#3c3c3c;position:relative}
+.p-wax .grid{display:grid;grid-template-columns:1.3fr .8fr;align-items:stretch}
+.p-wax .left{padding:50px 46px 36px;position:relative}
+.p-wax .leaf{position:absolute;top:0;left:0;width:150px;opacity:.55}
+.p-wax .brandline{font-family:var(--caps);letter-spacing:.32em;font-size:.76rem;color:#666;text-align:center}
+.p-wax .title{text-align:center;margin:10px 0 28px}
+.p-wax .title .script{font-size:5rem;color:#4b4b4b;line-height:.9;display:block}
+.p-wax .title b{font-family:var(--sans);font-weight:500;letter-spacing:.38em;font-size:1.25rem;color:#4b4b4b}
+.wrow{display:flex;align-items:center;gap:18px;padding:12px 0;border-bottom:1px solid #d3d3d3}
+.wrow .ic{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#e9e9e9,#cfcfcf);display:grid;place-items:center;flex:none}
+.wrow .ic svg{width:34px;height:34px;stroke:#666;fill:none;stroke-width:1.3}
+.wrow h5{flex:1;font-family:var(--sans);font-weight:500;letter-spacing:.08em;font-size:1rem;text-transform:uppercase}
+.wrow .pr{background:#7a7a7a;color:#fff;font-weight:600;font-size:1.25rem;padding:6px 22px;border-radius:999px}
+.combo{display:flex;align-items:center;gap:20px;background:linear-gradient(135deg,#7b7b7b,#5d5d5d);color:#fff;border-radius:22px;padding:22px 26px;margin-top:22px}
+.combo svg{width:56px;height:56px;stroke:#fff;fill:none;stroke-width:1.2;flex:none}
+.combo h5{font-family:var(--sans);font-weight:500;letter-spacing:.2em;font-size:1.05rem}
+.combo p{font-size:.86rem;opacity:.9}
+.combo .pr{display:inline-block;background:#fff;color:#4a4a4a;font-weight:700;font-size:1.35rem;padding:3px 22px;border-radius:999px;margin-top:8px}
+.p-wax .sign{font-family:var(--script);font-size:2.2rem;color:#555;margin-top:20px;line-height:1.1}
+.p-wax .right{background:#ccc url(images/web/waxing-legs.jpg) center top/cover;min-height:480px}
+.p-wax .foot{background:#6b6b6b;color:#f2f2f2;text-align:center;padding:18px 20px;font-size:.7rem;letter-spacing:.3em}
+.p-wax .btn-dark{background:#5d5d5d}
+
+/* ===== BEAUTY SPA (sage + deep green + gold poster) ===== */
+.p-spa{background:
+  radial-gradient(circle at 10% 10%,rgba(176,203,186,.55),transparent 40%),
+  radial-gradient(circle at 90% 85%,rgba(176,203,186,.5),transparent 42%),
+  radial-gradient(circle at 85% 10%,rgba(214,226,218,.8),transparent 35%),#f6f8f4;color:#24382f;padding:52px 46px;border:1px solid #d7c48f;position:relative}
+.p-spa::before{content:"";position:absolute;inset:12px;border:1px solid rgba(185,143,69,.45);border-radius:20px;pointer-events:none}
+.p-spa .top{text-align:center}
+.p-spa .mono{font-family:var(--serif);font-size:2.2rem;color:#b8924a;font-weight:600;letter-spacing:-.05em}
+.p-spa .top h3{font-family:var(--caps);font-weight:500;font-size:clamp(2.4rem,6vw,4rem);letter-spacing:.24em;color:#1f4a3a;line-height:1}
+.p-spa .top .bs{font-family:var(--caps);letter-spacing:.5em;color:#b8924a;font-size:1rem;margin-top:6px}
+.p-spa .top .tl{font-family:var(--serif);letter-spacing:.14em;font-size:.95rem;margin-top:10px;font-weight:600}
+.spa-intro{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:34px 0 10px;align-items:center}
+.spa-intro img{border-radius:18px;width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid #d7c48f}
+.spa-intro p{font-family:var(--serif);font-size:1.25rem;line-height:1.5;color:#2c4a3d}
+.spa-intro .door{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.spa-intro .door span{font-family:var(--caps);font-size:.7rem;letter-spacing:.14em;border:1px solid #c9b27a;border-radius:999px;padding:5px 12px;color:#1f4a3a;background:rgba(255,255,255,.6)}
+.spa-tables{display:grid;grid-template-columns:1fr 1fr;gap:30px 40px;margin-top:30px}
+.st h4{display:flex;align-items:center;gap:12px;font-family:var(--caps);font-weight:600;color:#1f4a3a;font-size:1.25rem;letter-spacing:.06em;margin-bottom:12px}
+.st h4 i{width:46px;height:46px;border-radius:50%;background:#dfe8e0;display:grid;place-items:center;flex:none}
+.st h4 svg{width:26px;height:26px;stroke:#b8924a;fill:none;stroke-width:1.3}
+.st table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.75);font-size:.92rem}
+.st th{text-align:left;color:#b8924a;font-weight:600;font-size:.74rem;letter-spacing:.14em;padding:9px 14px;background:#eef3ec;border:1px solid #d5dccf}
+.st td{padding:9px 14px;border:1px solid #d5dccf}
+.st td:last-child,.st th:last-child{text-align:center;width:110px;font-weight:600}
+.st .see{font-size:.82rem;margin-top:10px;color:#4b6658}
+.st .see button{background:none;border:0;color:#1f4a3a;text-decoration:underline;font:inherit;cursor:pointer;font-weight:600}
+.why{margin-top:40px;border:1px solid #d7c48f;border-radius:18px;padding:24px 18px;background:rgba(255,255,255,.65)}
+.why h4{text-align:center;font-family:var(--script);font-size:2.3rem;color:#b8924a;font-weight:400;margin-bottom:14px}
+.why ul{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;text-align:center}
+.why li{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#33463d}
+.why svg{width:40px;height:40px;stroke:#24382f;fill:none;stroke-width:1.2;margin:0 auto 8px}
+.journey{margin-top:40px}
+.journey h4{text-align:center;font-family:var(--caps);font-weight:500;color:#1f4a3a;letter-spacing:.2em;font-size:1.3rem}
+.journey p.c{text-align:center;font-family:var(--serif);font-style:italic;color:#4b6658;margin:4px 0 18px}
+.journey .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.journey img{border-radius:14px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.p-spa .terms{margin-top:34px;background:#1f4a3a;color:#eef3ec;text-align:center;border-radius:999px;padding:14px 24px;font-size:.85rem}
+.p-spa .terms em{font-family:var(--serif);font-size:1rem;display:block}
+.p-spa .btn-dark{background:#1f4a3a}
+.p-spa .btn-line{border-color:#1f4a3a;color:#1f4a3a}
+
+/* ---------- about ---------- */
+.about{background:#fff}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.about img{border-radius:20px;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%}
+.about h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:var(--brown)}
+.about h2 .script{color:var(--gold);font-size:1.2em}
+.about p{color:var(--brown-2);margin-top:18px;font-size:1.02rem}
+.trio{display:flex;gap:28px;margin-top:30px;font-family:var(--caps);letter-spacing:.24em;font-size:.8rem;color:var(--brown)}
+.trio span::before{content:"♥";color:var(--gold);margin-right:8px;font-size:.7em}
+
+/* ---------- products ---------- */
+.products{background:linear-gradient(180deg,#f4ead9,#faf5ef)}
+.prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.prod{background:#fff;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr 1.1fr;box-shadow:0 20px 40px -30px rgba(70,45,20,.5)}
+.prod img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.prod div{padding:28px}
+.prod h3{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--brown);line-height:1.1}
+.prod p{color:var(--muted);font-size:.9rem;margin:10px 0 14px}
+.prod ul{list-style:none;font-size:.9rem}
+.prod li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--sand)}
+.prod li b{color:var(--gold)}
+.prod a{display:inline-block;margin-top:18px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--brown)}
+
+/* ---------- visit ---------- */
+.visit{background:var(--brown);color:#efe3d2}
+.visit .head h2{color:#fff}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+.vcard{background:rgba(255,255,255,.05);border:1px solid rgba(217,180,106,.3);border-radius:20px;padding:28px}
+.vcard h3{font-family:var(--caps);font-weight:500;letter-spacing:.18em;font-size:1rem;color:var(--gold-l);margin-bottom:16px}
+.vcard p,.vcard li{font-size:.92rem;line-height:1.75}
+.vcard ul{list-style:none}
+.vcard a{text-decoration:none;border-bottom:1px solid rgba(217,180,106,.4)}
+.vcard a:hover{color:var(--gold-l)}
+.vcard .row{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.vcard .row svg{width:20px;height:20px;stroke:var(--gold-l);fill:none;stroke-width:1.5;flex:none;margin-top:3px}
+.bank dt{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-top:10px}
+.bank dd{font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:.06em}
+.map{margin-top:22px;border-radius:20px;overflow:hidden;border:1px solid rgba(217,180,106,.3);height:320px;background:#3b2d22}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) sepia(.15)}
+
+/* ---------- footer ---------- */
+footer{background:#1d1510;color:#bfae98;padding:40px 0 30px;font-size:.82rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .brand b{color:#efe3d2}
+footer .brand small{color:var(--gold-l)}
+footer .soc{display:flex;gap:16px}
+footer .soc a{text-decoration:none}
+footer .soc a:hover{color:var(--gold-l)}
+footer .credit{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;margin-top:6px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.76rem}
+footer .credit a{color:var(--gold-l);text-decoration:none;font-weight:600}
+footer .credit a:hover{text-decoration:underline}
+
+/* floating whatsapp */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  nav.main{position:fixed;inset:78px 0 auto 0;background:var(--cream);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid var(--sand);transform:translateY(-130%);visibility:hidden;transition:transform .3s,visibility .3s;z-index:-1}
+  nav.main.open{transform:none;visibility:visible}
+  .menu-btn{display:block}
+  .hero .wrap,.about .wrap{grid-template-columns:1fr}
+  .hero-img{max-width:440px;margin:0 auto}
+  .tabs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 4px 12px;margin:0 -20px 26px;padding-left:20px;padding-right:20px}
+  .tab{flex:0 0 150px;scroll-snap-align:start}
+  .p-mani .grid,.p-pedi .grid,.p-lash .grid,.p-wax .grid,.spa-intro,.spa-tables,.prod-grid,.visit-grid{grid-template-columns:1fr}
+  .p-lash .right{min-height:340px;border-radius:0;order:-1}
+  .p-wax .right{min-height:300px;order:-1;background-position:center 20%}
+  .why ul{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:600px){
+  .strip .wrap{justify-content:center;text-align:center}
+  .strip .hide-sm{display:none}
+  section.block{padding:70px 0}
+  .p-pedi .grid,.p-lash .left,.p-wax .left{padding:34px 20px 26px}
+  .p-spa{padding:38px 18px}
+  .p-mani{padding:30px 12px}
+  .arch{padding:56px 16px 30px;border-radius:220px 220px 0 0}
+  .arch .ttl{font-size:2.3rem}
+  .arch li{font-size:.72rem;letter-spacing:.12em;padding:5px 4px}
+  .pcard{grid-template-columns:1fr auto;padding:18px}
+  .pcard .ico{display:none}
+  .pcard ul{columns:1}
+  .price-badge{font-size:1.2rem;padding:8px 14px}
+  .lrow img{width:56px;height:56px}
+  .lrow h5{font-size:1rem}
+  .lrow .pr{font-size:1.05rem;padding:8px 14px}
+  .p-lash .title .script,.p-wax .title .script{font-size:4rem}
+  .wrow .ic{display:none}
+  .p-lash .foot{padding:20px}
+  .why ul{grid-template-columns:repeat(2,1fr)}
+  .journey .gal{grid-template-columns:1fr 1fr}
+  .journey .gal img:last-child{display:none}
+  .prod{grid-template-columns:1fr}
+  .prod img{min-height:220px;max-height:260px}
+  .p-spa .terms{border-radius:18px}
+  .hero .meta{gap:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- svg sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.8-5.8C5 9.9 9.9 5.1 16 5.1s11 4.8 11 10.7-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 48 48"><path d="M6 24h36a18 12 0 0 1-36 0z"/><path d="M18 22c0-6 2-12 6-14M26 22c0-5 3-10 7-11"/><circle cx="15" cy="30" r="1.6"/><circle cx="24" cy="32" r="1.6"/><circle cx="33" cy="30" r="1.6"/><path d="M38 9l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></symbol>
+  <symbol id="i-foot" viewBox="0 0 48 48"><path d="M20 6c-2 8-1 16 2 22 2 5 0 10-6 12h18c3 0 5-3 3-6l-6-8c-2-3-3-10-2-20"/><path d="M8 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM40 20l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></symbol>
+  <symbol id="i-arm" viewBox="0 0 48 48"><path d="M14 40c2-8 2-16 6-22 3-4 8-6 10-12M26 40c0-6 1-10 4-14M34 24c2-2 4-6 4-10"/><path d="M10 10l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></symbol>
+  <symbol id="i-bikini" viewBox="0 0 48 48"><path d="M8 12c2 14 8 24 16 26 8-2 14-12 16-26"/><path d="M14 18c4 4 8 6 10 6s6-2 10-6M20 26l4 6 4-6"/></symbol>
+  <symbol id="i-holly" viewBox="0 0 48 48"><path d="M8 12c2 14 8 24 16 26 8-2 14-12 16-26"/><path d="M24 24c-2-3-6-1-4 2l4 4 4-4c2-3-2-5-4-2z"/></symbol>
+  <symbol id="i-lady" viewBox="0 0 48 48"><circle cx="22" cy="9" r="4"/><path d="M22 13c-4 4-6 10-4 16l6 2 10 8M18 29c-4 2-6 6-6 10M24 20c4 2 8 2 10 0"/><path d="M38 12l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM42 22l.7 1.4 1.3.6-1.3.6-.7 1.4-.7-1.4-1.3-.6 1.3-.6z"/></symbol>
+  <symbol id="i-face" viewBox="0 0 48 48"><circle cx="24" cy="22" r="11"/><path d="M14 18c4-8 16-8 20 0M19 22h2M27 22h2M21 28c2 1.5 4 1.5 6 0M14 40c2-4 6-6 10-6s8 2 10 6"/></symbol>
+  <symbol id="i-massage" viewBox="0 0 48 48"><circle cx="12" cy="24" r="4"/><path d="M6 32h36M16 26c6-2 14-2 22 2M26 10c0 4 2 8 6 10M32 8c0 4 2 8 4 10"/></symbol>
+  <symbol id="i-feet" viewBox="0 0 48 48"><path d="M14 10c-3 0-5 6-4 14s1 12 4 14 4-3 3-8 3-10 1-16c-1-3-2-4-4-4zM34 10c3 0 5 6 4 14s-1 12-4 14-4-3-3-8-3-10-1-16c1-3 2-4 4-4z"/></symbol>
+  <symbol id="i-cert" viewBox="0 0 48 48"><rect x="6" y="8" width="32" height="26" rx="2"/><path d="M12 16h20M12 22h12"/><circle cx="34" cy="32" r="5"/><path d="M31 36l-1 8 4-2 4 2-1-8"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M10 38c0-16 10-28 28-28 0 18-12 28-28 28z"/><path d="M10 38l18-18"/></symbol>
+  <symbol id="i-lotus" viewBox="0 0 48 48"><path d="M24 36c-4-4-6-10-0-20 6 10 4 16 0 20zM24 36c-8 0-14-4-16-12 8 0 14 4 16 12zM24 36c8 0 14-4 16-12-8 0-14 4-16 12zM8 38h32"/></symbol>
+  <symbol id="i-star" viewBox="0 0 48 48"><circle cx="20" cy="14" r="6"/><path d="M8 40c0-8 6-14 12-14 3 0 5 1 7 2M34 26l2 5 5 .5-4 3.5 1.2 5L34 37l-4.2 3 1.2-5-4-3.5 5-.5z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 22c-3-6-12-4-10 3l10 9 10-9c2-7-7-9-10-3z"/><path d="M6 30l8 10h12M42 30l-8 10H22"/></symbol>
+</svg>
+
+<div class="strip">
+  <div class="wrap">
+    <span>Premium Towers · Floor 3 · Room 306 · Pretoria Central</span>
+    <span class="hide-sm">Mon – Sat · By appointment &nbsp;|&nbsp; <a href="tel:+27677085887">067 708 5887</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="images/web/logo-round.jpg" alt="Cinci Beauty Spa logo">
+      <span><b>Cinci</b><small>BEAUTY SPA</small></span>
+    </a>
+    <nav class="main" id="nav">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-dark" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener"><svg><use href="#i-wa" fill="currentColor"/></svg>Book now</a>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1><span class="script">Where beauty</span>meets tranquility</h1>
+      <div class="tag">RELAX • REFRESH • RENEW</div>
+      <p class="lead">Experience luxurious facials, advanced dermaplaning, soothing body therapies and expert waxing, plus beautiful nails and lashes, all designed to reveal your natural radiance. Step into a serene escape and leave feeling renewed, confident and glowing.</p>
+      <div class="cta">
+        <a class="btn btn-dark" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener"><svg><use href="#i-wa" fill="currentColor"/></svg>Book on WhatsApp</a>
+        <a class="btn btn-line" href="#services">View price lists</a>
+      </div>
+      <div class="meta">
+        <div><b>WHERE</b>296 Pretorius St, Pretoria Central</div>
+        <div><b>WHEN</b>Mon – Sat, by appointment</div>
+        <div><b>CALL</b><a href="tel:+27677085887">067 708 5887</a></div>
+      </div>
+    </div>
+    <div class="hero-img"><img src="images/web/logo.jpg" alt="Cinci Beauty Spa illuminated sign: Relax, Refresh, Renew"></div>
+  </div>
+</section>
+
+<!-- SERVICES / TABS -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div class="script">Our services</div>
+      <h2>PRICE LISTS</h2>
+      <p>Choose a treatment below to see the full menu and prices.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Services">
+      <button class="tab" role="tab" id="t-manicure" aria-controls="manicure" aria-selected="true"><img src="images/web/manicure-hands.jpg" alt=""><span><b>Manicure</b><small>Poly gel nails</small></span></button>
+      <button class="tab" role="tab" id="t-pedicure" aria-controls="pedicure" aria-selected="false"><img src="images/web/ped-soak.jpg" alt=""><span><b>Pedicure</b><small>Feet &amp; toes</small></span></button>
+      <button class="tab" role="tab" id="t-lash" aria-controls="lash" aria-selected="false"><img src="images/web/lash-1.jpg" alt=""><span><b>Lash</b><small>Extensions</small></span></button>
+      <button class="tab" role="tab" id="t-waxing" aria-controls="waxing" aria-selected="false"><img src="images/web/waxing-legs.jpg" alt="" style="object-position:center 20%"><span><b>Waxing</b><small>Smooth skin</small></span></button>
+      <button class="tab" role="tab" id="t-spa" aria-controls="spa" aria-selected="false"><img src="images/web/spa-facial.jpg" alt="" style="object-position:70% center"><span><b>Beauty Spa</b><small>Facials &amp; massage</small></span></button>
+    </div>
+
+    <!-- MANICURE -->
+    <div class="panel p-mani active" role="tabpanel" id="manicure" aria-labelledby="t-manicure">
+      <div class="grid">
+        <div class="side">
+          <img src="images/web/manicure-hands.jpg" alt="Neat natural French manicure">
+          <h3>Poly gel nails, plain or French</h3>
+          <p>Finished your way with chrome, ombre, glitter, rhinestones or hand-drawn art.</p>
+          <div class="book-row"><a class="btn btn-dark" target="_blank" rel="noopener" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20book%20a%20manicure."><svg><use href="#i-wa" fill="currentColor"/></svg>Book a manicure</a></div>
+        </div>
+        <div class="arch">
+          <div class="ttl">PRICE<span class="script">list</span></div>
+          <h4 class="first">POLY GEL NAIL</h4>
+          <h4>PLAIN NAILS</h4>
+          <ul>
+            <li><span>SHORT NAILS</span><span>R150</span></li>
+            <li><span>MEDIUM NAILS</span><span>R180</span></li>
+            <li><span>LARGE NAILS</span><span>R210</span></li>
+            <li><span>X-LARGE NAILS</span><span>R240</span></li>
+            <li><span>BUFF AND SHINE</span><span>R150</span></li>
+            <li><span>PEDICURE</span><span>R150</span></li>
+          </ul>
+          <h4>FRENCH NAILS</h4>
+          <ul>
+            <li><span>SHORT NAILS</span><span>R200</span></li>
+            <li><span>MEDIUM NAILS</span><span>R250</span></li>
+            <li><span>LARGE NAILS</span><span>R300</span></li>
+            <li><span>X-LARGE NAILS</span><span>R350</span></li>
+            <li><span>PEDICURE</span><span>R200</span></li>
+          </ul>
+          <h4>EXTRA SERVICES</h4>
+          <ul>
+            <li><span>FRENCH PER NAIL</span><span>R5</span></li>
+            <li><span>HAND DRAWN ART PER NAIL</span><span>R5</span></li>
+            <li><span>CHROME PER NAIL</span><span>R5</span></li>
+            <li><span>OMBRE PER NAIL</span><span>R10</span></li>
+            <li><span>GLITTER PER NAIL</span><span>R10</span></li>
+            <li><span>RHINESTONES PER NAIL</span><span>R10</span></li>
+            <li><span>3-D ART PER NAIL</span><span>R10</span></li>
+            <li><span>SOAK OFF</span><span>R50</span></li>
+            <li><span>FOREIGN SOAK OFF</span><span>R80</span></li>
+          </ul>
+          <div class="addr">PREMIUM TOWERS, 3RD FLOOR, ROOM 306<br>296 PRETORIUS STREET · PRETORIA CENTRAL</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PEDICURE -->
+    <div class="panel p-pedi" role="tabpanel" id="pedicure" aria-labelledby="t-pedicure">
+      <div class="grid">
+        <div>
+          <div class="brandline">BEAUTY · SKIN · WELLNESS</div>
+          <h3>PEDICURE</h3>
+          <div class="script">Price List ♡</div>
+
+          <div class="pcard">
+            <div class="ico"><svg><use href="#i-bowl"/></svg></div>
+            <div><h5>FULL PEDICURE</h5><ul><li>Foot soak</li><li>Filing</li><li>Exfoliation</li><li>Nail care</li><li>Foot massage</li></ul></div>
+            <div class="price-badge">R250</div>
+          </div>
+          <div class="pcard gold">
+            <div class="ico"><svg><use href="#i-foot"/></svg></div>
+            <div><h5>FULL PEDICURE + FOOT PEEL</h5><ul><li>Foot peeling</li><li>Filing</li><li>Exfoliation</li><li>Nail care</li><li>Foot massage</li></ul></div>
+            <div class="price-badge">R300</div>
+          </div>
+          <div class="addons">
+            <span class="lbl">ADD-ONS</span>
+            <div class="row"><span>GEL TOES</span><span>+R50</span></div>
+            <div class="row"><span>POLYGEL / RUBBER BASE GEL</span><span>+R80</span></div>
+          </div>
+        </div>
+        <div class="photos">
+          <img class="big" src="images/web/pedicure-feet.jpg" alt="Pampered feet with French pedicure">
+          <img class="circ" src="images/web/ped-scrub.jpg" alt="Foot exfoliation">
+          <img class="circ" src="images/web/ped-massage.jpg" alt="Foot massage">
+        </div>
+      </div>
+      <div class="foot">
+        <div class="script">Step in. Relax. You're in good hands.</div>
+        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20book%20a%20pedicure."><svg><use href="#i-wa" fill="currentColor"/></svg>Book a pedicure</a>
+      </div>
+    </div>
+
+    <!-- LASH -->
+    <div class="panel p-lash" role="tabpanel" id="lash" aria-labelledby="t-lash">
+      <div class="grid">
+        <div class="left">
+          <div class="brandline">BEAUTY · SKIN · WELLNESS</div>
+          <div class="title"><span class="script">Lash</span><b>PRICE LIST</b></div>
+          <div class="sub">ENHANCE YOUR NATURAL BEAUTY</div>
+          <div class="lrow"><img src="images/web/lash-0.jpg" alt=""><div><h5>Cluster Lashes</h5><small>Fuller look, natural feel</small></div><span class="pr">R200</span></div>
+          <div class="lrow"><img src="images/web/lash-1.jpg" alt=""><div><h5>Classic Lashes</h5><small>Timeless &amp; elegant</small></div><span class="pr">R250</span></div>
+          <div class="lrow"><img src="images/web/lash-2.jpg" alt=""><div><h5>Cat-Eye Lashes</h5><small>Lifted &amp; defined</small></div><span class="pr">R300</span></div>
+          <div class="lrow"><img src="images/web/lash-3.jpg" alt=""><div><h5>Volume Lashes</h5><small>Bold, beautiful, dramatic</small></div><span class="pr">R350</span></div>
+        </div>
+        <div class="right" role="img" aria-label="Close-up of lash extensions">
+          <div class="quote"><div class="script">Lashes</div><p>SPEAK LOUDER THAN WORDS ♡</p></div>
+        </div>
+      </div>
+      <div class="foot">
+        <span class="script">Look Good · Feel Good · Be You</span>
+        <span class="pill">APPOINTMENTS ONLY</span>
+        <a class="btn btn-dark" target="_blank" rel="noopener" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20book%20lashes."><svg><use href="#i-wa" fill="currentColor"/></svg>Book your lashes</a>
+      </div>
+    </div>
+
+    <!-- WAXING -->
+    <div class="panel p-wax" role="tabpanel" id="waxing" aria-labelledby="t-waxing">
+      <div class="grid">
+        <div class="left">
+          <svg class="leaf" viewBox="0 0 150 150" aria-hidden="true"><g fill="none" stroke="#6f7a70" stroke-width="1.2"><path d="M0 40 C40 30 90 40 140 80"/><path d="M20 38c10-18 30-28 48-26-8 18-28 28-48 26z" fill="#9aa59b" fill-opacity=".5"/><path d="M60 46c14-14 36-18 52-12-12 14-34 18-52 12z" fill="#9aa59b" fill-opacity=".4"/><path d="M30 44c-4 18 2 38 18 50 4-18-4-38-18-50z" fill="#9aa59b" fill-opacity=".35"/></g></svg>
+          <div class="brandline">BEAUTY · SKIN · WELLNESS</div>
+          <div class="title"><span class="script">Waxing</span><b>PRICE LIST</b></div>
+          <div class="wrow"><span class="ic"><svg><use href="#i-arm"/></svg></span><h5>Underarm Wax</h5><span class="pr">R250</span></div>
+          <div class="wrow"><span class="ic"><svg><use href="#i-bikini"/></svg></span><h5>Bikini Wax</h5><span class="pr">R300</span></div>
+          <div class="wrow"><span class="ic"><svg><use href="#i-holly"/></svg></span><h5>Hollywood Wax</h5><span class="pr">R450</span></div>
+          <div class="combo">
+            <svg><use href="#i-lady"/></svg>
+            <div><h5>WAXING COMBO</h5><p>Underarm + Bikini + Hollywood</p><span class="pr">R500</span></div>
+          </div>
+          <div class="sign">Smooth skin looks good on you ♡</div>
+          <div class="book-row" style="justify-content:flex-start;margin-top:18px"><a class="btn btn-dark" target="_blank" rel="noopener" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20book%20a%20wax."><svg><use href="#i-wa" fill="currentColor"/></svg>Book a wax</a></div>
+        </div>
+        <div class="right" role="img" aria-label="Smooth waxed legs"></div>
+      </div>
+      <div class="foot">CINCI BEAUTY SPA — WHERE BEAUTY MEETS CLINICAL EXCELLENCE</div>
+    </div>
+
+    <!-- BEAUTY SPA -->
+    <div class="panel p-spa" role="tabpanel" id="spa" aria-labelledby="t-spa">
+      <div class="top">
+        <div class="mono">CB</div>
+        <h3>CINCI</h3>
+        <div class="bs">— BEAUTY SPA —</div>
+        <div class="tl">LUXURY BEAUTY • WELLNESS • SELF-CARE</div>
+      </div>
+
+      <div class="spa-intro">
+        <img src="images/web/spa-facial.jpg" alt="Relaxing facial massage">
+        <div>
+          <p>Step into a serene escape. From deep-cleansing facials and dermaplaning to hot stone massage and wood therapy, every treatment is designed to reveal your natural radiance.</p>
+          <div class="door"><span>Massage</span><span>Facial</span><span>Deep Cleansing</span><span>Dermaplaning</span><span>Back Scrub</span><span>Wood Therapy</span><span>Waxing</span><span>Pedicure</span></div>
+        </div>
+      </div>
+
+      <div class="spa-tables">
+        <div class="st">
+          <h4><i><svg><use href="#i-face"/></svg></i>FACIAL TREATMENTS</h4>
+          <table><thead><tr><th>SERVICE</th><th>PRICE</th></tr></thead><tbody>
+            <tr><td>Deep Cleansing Facial</td><td>R550</td></tr>
+            <tr><td>Dermaplaning Facial</td><td>R450</td></tr>
+          </tbody></table>
+        </div>
+        <div class="st">
+          <h4><i><svg><use href="#i-massage"/></svg></i>MASSAGE THERAPY</h4>
+          <table><thead><tr><th>SERVICE</th><th>PRICE</th></tr></thead><tbody>
+            <tr><td>Back, Neck &amp; Shoulder Massage</td><td>R280</td></tr>
+            <tr><td>Full Body Massage</td><td>R450</td></tr>
+            <tr><td>Hot Stone Massage</td><td>R550</td></tr>
+            <tr><td>Wood Therapy</td><td>R350</td></tr>
+            <tr><td>Wood Therapy Package (5 Sessions)</td><td>R1 500</td></tr>
+          </tbody></table>
+        </div>
+        <div class="st">
+          <h4><i><svg><use href="#i-feet"/></svg></i>FOOT CARE</h4>
+          <table><thead><tr><th>SERVICE</th><th>PRICE</th></tr></thead><tbody>
+            <tr><td>Deluxe Pedicure</td><td>R300</td></tr>
+            <tr><td>Callus &amp; Corn Removal</td><td>R350</td></tr>
+            <tr><td>Foot Detox Treatment</td><td>R380</td></tr>
+            <tr><td>Foot Massage</td><td>R150</td></tr>
+          </tbody></table>
+        </div>
+        <div class="st">
+          <h4><i><svg><use href="#i-leaf"/></svg></i>WAXING</h4>
+          <table><thead><tr><th>SERVICE</th><th>PRICE</th></tr></thead><tbody>
+            <tr><td>Full Leg Wax</td><td>R300</td></tr>
+            <tr><td>Brazilian Wax</td><td>R300</td></tr>
+            <tr><td>Full Face Wax</td><td>R180</td></tr>
+          </tbody></table>
+          <p class="see">Underarm, bikini, Hollywood &amp; combo: <button type="button" data-goto="waxing">see the Waxing menu</button></p>
+        </div>
+      </div>
+
+      <div class="why">
+        <h4>Why Choose Cinci Beauty Spa?</h4>
+        <ul>
+          <li><svg><use href="#i-cert"/></svg>Professional &amp; qualified beauty therapist</li>
+          <li><svg><use href="#i-leaf"/></svg>Premium products &amp; hygiene standards</li>
+          <li><svg><use href="#i-lotus"/></svg>Relaxing luxury environment</li>
+          <li><svg><use href="#i-star"/></svg>Personalized treatments</li>
+          <li><svg><use href="#i-heart"/></svg>Exceptional client care</li>
+        </ul>
+      </div>
+
+      <div class="journey">
+        <h4>A SKIN JOURNEY</h4>
+        <p class="c">Not a once-off treatment: real results from our facial clients.</p>
+        <div class="gal">
+          <img src="images/web/skin-journey.jpg" alt="Facial treatment progress">
+          <img src="images/web/skin-result.jpg" alt="Glowing skin after facial">
+          <img src="images/web/spa-door.jpg" alt="Cinci Beauty Spa treatment room door">
+        </div>
+      </div>
+
+      <div class="book-row">
+        <a class="btn btn-dark" target="_blank" rel="noopener" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20book%20a%20spa%20treatment."><svg><use href="#i-wa" fill="currentColor"/></svg>Book a spa treatment</a>
+        <a class="btn btn-line" href="tel:+27677085887">Call 067 708 5887</a>
+      </div>
+      <div class="terms">Prices are subject to change without prior notice.<em>Appointments are essential. A booking deposit may be required to secure your appointment.</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="block about" id="about">
+  <div class="wrap">
+    <img src="images/web/spa-door.jpg" alt="Cinci Beauty Spa door listing massage, facial, dermaplaning, wood therapy, waxing and pedicure">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">About Cinci</div>
+      <h2><span class="script">Where beauty</span> meets care</h2>
+      <p>Cinci Beauty Spa is a calm, private studio on the third floor of Premium Towers in Pretoria Central. We specialise in beauty, cosmetic and personal care: poly gel nails, pedicures, lash extensions, waxing, facials, dermaplaning, massage and wood therapy.</p>
+      <p>Every visit is by appointment, so you get our full attention, premium products and high hygiene standards. Leave feeling renewed, confident and glowing.</p>
+      <div class="trio"><span>BEAUTY</span><span>SKIN</span><span>WELLNESS</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="block products" id="products">
+  <div class="wrap">
+    <div class="head">
+      <div class="script">Take the glow home</div>
+      <h2>CINCI ORGANIC PRODUCTS</h2>
+      <p>Wellness and skin-care products available in the spa. Message us to order.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod">
+        <img src="images/web/belly.jpg" alt="Cinci Belly Buster slimming juice and Tummy Fat Destroyer tea">
+        <div>
+          <h3>Belly Buster &amp; Slimming Tea</h3>
+          <p>Cinci Belly Buster Slimming Juice, paired with Tummy Fat Destroyer Tea.</p>
+          <ul>
+            <li><span>Belly Buster Slimming Juice</span><b>R150</b></li>
+            <li><span>Tummy Fat Destroyer Tea</span><b>R120</b></li>
+            <li><span>Combo (juice + tea)</span><b>R250</b></li>
+          </ul>
+          <a target="_blank" rel="noopener" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20order%20the%20Belly%20Buster%20combo.">Order on WhatsApp →</a>
+        </div>
+      </div>
+      <div class="prod">
+        <img src="images/web/serums.jpg" alt="Acne, pigmentation and glow serums">
+        <div>
+          <h3>Advanced Skin-Care Serums</h3>
+          <p>Treatment serums to support your skin journey between facials.</p>
+          <ul>
+            <li><span>Acne Serum</span><b>Ask us</b></li>
+            <li><span>Pigmentation Serum</span><b>Ask us</b></li>
+            <li><span>Glow Serum</span><b>Ask us</b></li>
+          </ul>
+          <a target="_blank" rel="noopener" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20ask%20about%20your%20serums.">Ask about serums →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="block visit" id="visit">
+  <div class="wrap">
+    <div class="head">
+      <div class="script">Book your appointment today</div>
+      <h2>VISIT US</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="vcard">
+        <h3>FIND US</h3>
+        <div class="row"><svg><use href="#i-pin"/></svg><p>Premium Towers, 3rd Floor, Room 306<br>296 Pretorius Street<br>Pretoria Central, 0002</p></div>
+        <div class="row"><svg><use href="#i-clock"/></svg><p>Monday – Saturday: by appointment<br>Sunday &amp; public holidays: closed</p></div>
+      </div>
+      <div class="vcard">
+        <h3>GET IN TOUCH</h3>
+        <div class="row"><svg><use href="#i-wa" fill="#d9b46a" stroke="none"/></svg><p><a href="https://wa.me/27677085887" target="_blank" rel="noopener">WhatsApp +27 67 708 5887</a></p></div>
+        <div class="row"><svg><use href="#i-phone"/></svg><p><a href="tel:+27677085887">067 708 5887</a></p></div>
+        <div class="row"><svg><use href="#i-mail"/></svg><p><a href="mailto:cincibeautyspa@gmail.com">cincibeautyspa@gmail.com</a></p></div>
+        <div class="row"><svg><use href="#i-ig"/></svg><p><a href="https://www.instagram.com/cinciorganicproducts/" target="_blank" rel="noopener">@cinciorganicproducts</a></p></div>
+      </div>
+      <div class="vcard bank">
+        <h3>DEPOSITS &amp; PAYMENTS</h3>
+        <p style="font-size:.85rem;opacity:.85">A booking deposit may be required to secure your appointment. Please send proof of payment on WhatsApp.</p>
+        <dl>
+          <dt>Bank</dt><dd>Capitec Business</dd>
+          <dt>Account name</dt><dd>Cincibeautyspa</dd>
+          <dt>Account number</dt><dd>1054 519 498</dd>
+          <dt>Branch code</dt><dd>470010</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Map to Cinci Beauty Spa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=296%20Pretorius%20Street%2C%20Pretoria%20Central%2C%200002&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="images/web/logo-round.jpg" alt=""><span><b>Cinci</b><small>BEAUTY SPA</small></span></a>
+    <div class="soc">
+      <a href="https://wa.me/27677085887" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/cinciorganicproducts/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:cincibeautyspa@gmail.com">Email</a>
+    </div>
+    <div class="credit">
+      <span>© <span id="yr">2026</span> Cinci Beauty Spa · Relax • Refresh • Renew</span>
+      <span>Developed by <a href="https://www.andreaswebstudio.co.za" target="_blank" rel="noopener">www.andreaswebstudio.co.za</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/27677085887?text=Hi%20Cinci%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var ids=tabs.map(function(t){return t.getAttribute('aria-controls')});
+  function show(id,scroll){
+    if(ids.indexOf(id)<0) return;
+    tabs.forEach(function(t){
+      var on=t.getAttribute('aria-controls')===id;
+      t.setAttribute('aria-selected',on);
+      t.tabIndex=on?0:-1;
+      document.getElementById(t.getAttribute('aria-controls')).classList.toggle('active',on);
+    });
+    try{history.replaceState(null,'','#'+id)}catch(e){}
+    if(scroll) document.getElementById('services').scrollIntoView({behavior:'smooth'});
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(ids[i])});
+    t.addEventListener('keydown',function(e){
+      var n=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+      if(n){var j=(i+n+tabs.length)%tabs.length;show(ids[j]);tabs[j].focus();}
+    });
+  });
+  document.querySelectorAll('[data-goto]').forEach(function(b){
+    b.addEventListener('click',function(){show(b.getAttribute('data-goto'),true)});
+  });
+  var h=location.hash.slice(1); if(ids.indexOf(h)>-1){show(h);setTimeout(function(){document.getElementById('services').scrollIntoView()},50)}
+  var mb=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open')})});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
